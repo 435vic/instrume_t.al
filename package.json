@@ -1,12 +1,18 @@
 {
 	"dependencies": {
+		"argon2": "^0.44.0",
 		"dotenv": "^17.2.2",
 		"express": "^5.1.0",
 		"express-handlebars": "^8.0.3",
+		"pino": "^9.11.0",
 		"sqlite3": "^5.1.7"
+	},
+	"scripts": {
+		"dev": "node --watch --watch-path . server.js | pino-pretty"
 	},
 	"type": "module",
 	"devDependencies": {
-		"@types/express": "^5.0.3"
+		"@types/express": "^5.0.3",
+		"pino-pretty": "^13.1.1"
 	}
 }
