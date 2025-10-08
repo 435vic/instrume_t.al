@@ -1,16 +1,20 @@
 import express from 'express';
 import { engine } from 'express-handlebars';
-import { getDatabase } from './src/db.js';
 import logger from './src/logger.js';
 import auth from './src/auth.js';
+import { fileURLToPath } from 'node:url';
+import cookieParser from 'cookie-parser';
 
 const app = express();
 
 app.engine('handlebars', engine());
 app.set('view engine', 'handlebars');
 app.set('views', './views');
-app.use(express.urlencoded());
-// app.use(express.json());
+
+app.use('/static', express.static(fileURLToPath(import.meta.resolve('./public'))));
+app.use(express.json());
+app.use(cookieParser());
+app.use(auth.middleware());
 
 app.get('/login', (req, res) => {
     res.render('login');
@@ -18,16 +22,27 @@ app.get('/login', (req, res) => {
 
 app.post('/login', async (req, res) => {
     const { username, password } = req.body;
-    const result = await auth.authenticate(username, password);
-    // logger.info(result);
-    if (!result) res.json({ err: 'auth', message: 'you shall not pass' });
-    res.json(result);
+    auth.authenticate(username, password).then((user) => {
+        if (!user) {
+            res.status(403).json({ err: 'auth', message: 'you shall not pass!' });
+            return;
+        }
+
+        res.cookie('session', user.sessionToken, { httpOnly: true });
+        res.json(user);
+    }).catch((err) => {
+        logger.error(`error in auth: ${err}`);
+        res.status(500).end();
+    });
+});
+
+app.get('/whoami', (req, res) => {
+    res.render('whoami', { user: req.user });
 });
 
 app.get('/', (req, res) => {
     res.render('home');
 });
-
 
 app.listen(3000);
 

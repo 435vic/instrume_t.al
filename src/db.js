@@ -1,8 +1,10 @@
 // @ts-check
 import sqlite3 from 'sqlite3';
+import { open } from 'sqlite';
 import fs from 'fs';
 import path from 'path';
 import logger from './logger.js';
+import { Database } from 'sqlite';
 
 const DB_LOCATION = process.env.DB_LOCATION || path.join(import.meta.dirname, '../database/');
 const DB_PATH = path.join(DB_LOCATION, 'database.sqlite'); 
@@ -11,7 +13,11 @@ if (!fs.existsSync(DB_LOCATION)) {
     fs.mkdirSync(DB_LOCATION);
 }
 
-const database = new sqlite3.Database(DB_PATH);
+const database = await open({
+    filename: DB_PATH,
+    driver: sqlite3.Database
+});
+const driver = database.getDatabaseInstance();
 logger.info(`db opened at ${DB_PATH}`);
 
 /**
@@ -33,6 +39,12 @@ function init(db) {
             secret TEXT UNIQUE NOT NULL,
             valid_till DATETIME
         )`);
+
+        db.run(`INSERT INTO users(id, username, pass) VALUES (
+            0, -- admin id is hardcoded on purpose
+            'admin',
+            '$argon2id$v=19$m=65536,t=3,p=4$WFF2TjMc4ve3mdXvjp0c2A$nl5w/OWg6Q4+pGkXUn83UxMQyN759r3gszOW0cvWzAc'
+        )`);
     });
 }
 
@@ -52,23 +64,18 @@ function seed(db) {
     });
 }
 
-logger.info('Initializing database...');
-init(database);
+let shouldInit = false;
 
-// TODO: make or use a library that wraps the db queries in promises, for easy
-// async management
-// block program until we make sure the admin user exists or not, so we can
-// seed the database if it's missing
-const missingAdmin = await new Promise((resolve, reject) => {
-    database.get('SELECT id FROM users WHERE id == 0', (err, result) => {
-        if (err) reject(err);
-        else resolve(result === undefined);
-    });
-});
+try {
+    const admin = await database.get('SELECT id FROM users WHERE id == 0');
+    shouldInit = admin === undefined;
+} catch (err) {
+    shouldInit = true;
+}
 
-if (missingAdmin) {
+if (shouldInit) {
     logger.warn('Database seems uninitialized, seeding with values...');
-    seed(database);
+    init(driver);
 }
 
 export function getDatabase() {

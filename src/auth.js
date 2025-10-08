@@ -18,24 +18,16 @@ class AuthManager {
     }
 
     async authenticate(username, password) {
-        const result = await new Promise((resolve, reject) => {
-            this.db.get('SELECT id,pass,username FROM users WHERE username == (?)', [username], (err, res) => {
-                if (err) {
-                    reject(err);
-                }
-                resolve(res);
-            });
-        });
+        const result = await this.db.get('SELECT id,pass,username FROM users WHERE username == (?)', [username]);
         
         if (!result) return null;
-        
         if (await argon2.verify(result.pass, password)) {
             const token = await this.generateToken();
             
-            db.run(`
+            this.db.run(`
                 INSERT INTO sessions (user_id, secret, valid_till)
                 VALUES (?, ?, datetime('now', '+24 hours'))
-            `, [token, result.id]);
+            `, [result.id, token]);
 
             return {
                 username,
@@ -44,6 +36,29 @@ class AuthManager {
         }
 
         return null;
+    }
+
+    middleware() {
+        return async (req, res, next) => {
+            const session = req.cookies.session;
+            if (!session) return next();
+             
+            logger.info(`session ${session}`);
+            const user = await this.db.get(`
+                SELECT u.*
+                FROM users u
+                INNER JOIN sessions s ON s.user_id = u.id
+                WHERE s.secret == (?) AND s.valid_till > datetime('now')
+            `, [session]);
+            if (!user) return next();
+
+            logger.info(`session found for {user.username}`);
+
+            req.user = {
+                username: user.username,
+            };
+            next();
+        }
     }
 }
 
