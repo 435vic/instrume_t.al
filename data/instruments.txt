@@ -1,0 +1,176 @@
+[
+  {
+    "id": 1,
+    "name": "Sitar",
+    "description": "A long-necked, plucked stringed instrument from the Indian subcontinent. It features a gourd resonator, a wide neck with movable frets, and a set of sympathetic strings that resonate in response to the main strings, creating a rich, layered sound.",
+    "origin_date": "1739"
+  },
+  {
+    "id": 2,
+    "name": "Djembe",
+    "description": "A rope-tuned, skin-covered goblet drum from West Africa, played with bare hands. It produces a wide range of tones and is traditionally an integral part of community life, used in ceremonies and celebrations.",
+    "origin_date": "1200"
+  },
+  {
+    "id": 3,
+    "name": "Great Highland Bagpipes",
+    "description": "An aerophone from Scotland consisting of a bag reservoir, a blowpipe for inflation, a chanter for melody, and three drones that produce a constant harmonic background.",
+    "origin_date": "c. 1400"
+  },
+  {
+    "id": 4,
+    "name": "Koto",
+    "description": "The national instrument of Japan, a long board zither traditionally made of paulownia wood, with thirteen silk strings stretched over movable bridges.",
+    "origin_date": "700"
+  },
+  {
+    "id": 5,
+    "name": "Yidaki / Didgeridoo",
+    "description": "A natural trumpet developed by the Aboriginal peoples of northern Australia, made from eucalyptus branches hollowed out by termites and played using a circular breathing technique.",
+    "origin_date": "500"
+  },
+  {
+    "id": 6,
+    "name": "Oud",
+    "description": "A pear-shaped, short-necked, fretless lute foundational to music across the Middle East and North Africa. Its fretless neck enables the use of microtonal intervals common in regional music.",
+    "origin_date": "c. 700"
+  },
+  {
+    "id": 7,
+    "name": "Mbira",
+    "description": "A lamellaphone ('thumb piano') of the Shona people of Zimbabwe, featuring staggered metal keys on a wooden soundboard. It is often placed inside a gourd resonator to amplify its sound.",
+    "origin_date": "c. 1000"
+  },
+  {
+    "id": 8,
+    "name": "Steelpan",
+    "description": "A pitched percussion instrument created in Trinidad and Tobago from 55-gallon oil drums. The drum's surface is hammered into distinct, tuned note-producing areas.",
+    "origin_date": "1930"
+  },
+  {
+    "id": 9,
+    "name": "Theremin",
+    "description": "An early electronic instrument played without physical contact. The musician controls pitch and volume by moving their hands in the proximity of two antennas that create an electromagnetic field.",
+    "origin_date": "1920"
+  },
+  {
+    "id": 10,
+    "name": "Electric Guitar",
+    "description": "A guitar that uses one or more electromagnetic pickups to convert the vibration of its strings into electrical signals, which are then routed to an amplifier.",
+    "origin_date": "1930"
+  },
+  {
+    "id": 11,
+    "name": "Piano",
+    "description": "A keyboard instrument where felt-covered hammers strike steel strings. It is known for its wide dynamic range, controlled by the player's touch on the keys.",
+    "origin_date": "1700"
+  },
+  {
+    "id": 12,
+    "name": "Violin",
+    "description": "A four-stringed bowed instrument with a fretless fingerboard. It is the highest-pitched member of the violin family and central to Western classical music.",
+    "origin_date": "1525"
+  },
+  {
+    "id": 13,
+    "name": "Acoustic Guitar",
+    "description": "A stringed instrument that produces sound acoustically through the vibration of its strings, amplified by its hollow wooden body.",
+    "origin_date": "c. 1850"
+  },
+  {
+    "id": 14,
+    "name": "Trumpet",
+    "description": "A brass instrument with the highest register in its family. Sound is produced by buzzing lips into a mouthpiece, with pitch altered by pressing three valves.",
+    "origin_date": "c. 1820"
+  },
+  {
+    "id": 15,
+    "name": "Flute",
+    "description": "A family of aerophones that produces sound from the flow of air across an opening. While ancient forms were end-blown, the modern concert flute is a transverse (side-blown) instrument.",
+    "origin_date": "<Ancient>"
+  },
+  {
+    "id": 16,
+    "name": "Drum Set",
+    "description": "A collection of drums, cymbals, and other percussion instruments arranged to be played by a single person, forming the rhythmic foundation in many genres of music.",
+    "origin_date": "c. 1909"
+  },
+  {
+    "id": 17,
+    "name": "Saxophone",
+    "description": "A single-reed woodwind instrument with a conical brass body and keyed fingering system, commonly used in jazz, classical, and popular music.",
+    "origin_date": "1846"
+  },
+  {
+    "id": 18,
+    "name": "Cello (Violoncello)",
+    "description": "A large, low-pitched bowed string instrument of the violin family, played while seated. It is known for its rich tone, which is said to be close to the human voice.",
+    "origin_date": "c. 1550"
+  },
+  {
+    "id": 19,
+    "name": "Clarinet",
+    "description": "A single-reed woodwind instrument with a cylindrical bore. It is known for its wide range and agile, expressive sound across different registers.",
+    "origin_date": "c. 1700"
+  },
+  {
+    "id": 20,
+    "name": "Electric Bass",
+    "description": "An electrically amplified stringed instrument, modeled on the electric guitar, designed to be played in the bass clef register to provide a harmonic and rhythmic foundation.",
+    "origin_date": "1951"
+  },
+  {
+    "id": 21,
+    "name": "Harp",
+    "description": "An ancient stringed instrument with strings positioned at an angle to its soundboard, played by plucking with the fingers. Modern orchestral harps use pedals to alter pitch.",
+    "origin_date": "<Ancient>"
+  },
+  {
+    "id": 22,
+    "name": "Trombone",
+    "description": "A brass instrument that uses a telescoping slide mechanism, rather than valves, to change pitch. It is known for its ability to produce a perfect glissando.",
+    "origin_date": "c. 1450"
+  },
+  {
+    "id": 23,
+    "name": "Banjo",
+    "description": "A stringed instrument, developed by enslaved Africans in the Americas, with a circular body covered by a thin membrane that serves as a resonator.",
+    "origin_date": "c. 1830"
+  },
+  {
+    "id": 24,
+    "name": "Oboe",
+    "description": "A double-reed woodwind instrument with a conical bore. It is known for its clear and penetrating tone and is often used to sound the tuning note for an orchestra.",
+    "origin_date": "c. 1650"
+  },
+  {
+    "id": 25,
+    "name": "Xylophone",
+    "description": "A percussion instrument consisting of tuned wooden bars arranged like a keyboard. It produces short, bright tones when struck with mallets.",
+    "origin_date": "<Ancient>"
+  },
+  {
+    "id": 26,
+    "name": "Accordion",
+    "description": "A portable, box-shaped aerophone played by compressing or expanding a bellows while pressing buttons or keys, causing air to flow across free reeds.",
+    "origin_date": "1829"
+  },
+  {
+    "id": 27,
+    "name": "French Horn",
+    "description": "A brass instrument made of over 20 feet of coiled tubing that flares into a wide bell. Pitch is controlled by a combination of lip tension, airflow, and rotary valves.",
+    "origin_date": "c. 1818"
+  },
+  {
+    "id": 28,
+    "name": "Ukulele",
+    "description": "A small, four-stringed member of the lute family that originated in Hawaii, based on Portuguese stringed instruments. It is known for its bright, cheerful sound.",
+    "origin_date": "c. 1880"
+  },
+  {
+    "id": 29,
+    "name": "Marimba",
+    "description": "A percussion instrument similar to a xylophone but with broader, more resonant wooden bars. Each bar is paired with a resonator tube, which amplifies its sound.",
+    "origin_date": "c. 1600"
+  }
+]
