@@ -1,34 +1,37 @@
-<h1 class="title">Instruments</h1>
+{{> page/nav }}
 
-<div class="grid is-col-min-16 is-gap-5 px-5">
-{{#each instruments}}
-    {{!-- <el><b>{{this.name}}</b>: {{this.description}}</el> --}}
-    <div class="cell" id="instrument-cell-{{this.id}}">
-        <div class="card">
-            <div class="card-image">
-                <figure class="image is-4by3">
-                    <img src="https://bulma.io/assets/images/placeholders/1280x960.png" alt="Placeholder image">
-                </figure>
-            </div>
-            <div class="card-content">
-                <p class="title">{{this.name}}</p>
-                <p class="subtitle">{{this.origin_date}}</p>
-                <p class="content">{{this.description}}</p>
-            </div>
-            {{#if (isAdmin ../user)}}
-            <footer class="card-footer">
-                <div class="card-footer-item">
-                    <button class="button" onclick="handleCardButton(this)" data-action="edit" data-forInstrument="{{this.id}}"><span class="icon">✏️</span></button>
+<h1 class="title">Instruments</h1>
+<div class="fixed-grid has-1-cols-mobile has-2-cols-tablet has-3-cols-desktop">
+    <div class="grid is-gap-5 px-5">
+    {{#each instruments}}
+        <div class="cell" id="instrument-cell-{{this.id}}">
+            <div class="card">
+                <div class="card-image">
+                    <figure class="image is-4by3">
+                        <img src="https://bulma.io/assets/images/placeholders/1280x960.png" alt="Placeholder image">
+                    </figure>
                 </div>
-                <div class="card-footer-item">
-                    <button class="button" onclick="handleCardButton(this)" data-action="delete" data-forInstrument="{{this.id}}"><span class="icon">🗑️</span></button>
+                <div class="card-content">
+                    <p class="title">{{this.name}}</p>
+                    <p class="subtitle">{{this.origin_date}}</p>
+                    <p class="content">{{this.description}}</p>
                 </div>
-            </footer>
-            {{/if}}
+                {{#if (isAdmin ../user)}}
+                <footer class="card-footer">
+                    <div class="card-footer-item">
+                        <button class="button" onclick="handleCardButton(this)" data-action="edit" data-forInstrument="{{this.id}}"><span class="icon">✏️</span></button>
+                    </div>
+                    <div class="card-footer-item">
+                        <button class="button" onclick="handleCardButton(this)" data-action="delete" data-forInstrument="{{this.id}}"><span class="icon">🗑️</span></button>
+                    </div>
+                </footer>
+                {{/if}}
+            </div>
         </div>
+    {{/each}}
     </div>
-{{/each}}
 </div>
+
 <nav class="pagination is-centered" role="pagination" aria-label="pagination">
 <ul class="pagination-list">
     {{#each pages}}

@@ -1,0 +1,41 @@
+<nav class="navbar" role="navigation" aria-class="main navigation">
+    <div class="navbar-brand">
+        Website
+    </div>
+    <a class="navbar-burger" role="button" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </a>
+    <div class="navbar-menu">
+        <div class="navbar-start">
+            <a href="/" class="navbar-item">Home</a>
+            <a href="/instruments" class="navbar-item">Instruments</a>
+            <a href="/artists" class="navbar-item">Artists</a>
+        </div>
+        <div class="navbar-end">
+            <div class="navbar-item">
+                {{#if user}}
+                    <div class="dropdown">
+                        <div class="dropdown-trigger">
+                            <a class="button">
+                                {{user.username}}
+                            </a>
+                        </div>
+                        <div class="dropdown-menu">
+                            <a class="button is-danger">Log out</a>
+                        </div>
+                    </div>
+                {{else}}
+                    {{#if url}}
+                        <a href="/login?return={{encodeURI url}}" class="button is-primary">Log In</a>
+                    {{else}}
+                        <a href="/login" class="button is-primary">Log In</a>
+                    {{/if}}
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</nav>
+

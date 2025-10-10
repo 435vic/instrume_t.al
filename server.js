@@ -12,6 +12,7 @@ const db = getDatabase();
 const handlebars = create({
     helpers: {
         isAdmin: (user) => user?.username == 'admin',
+        encodeURI: encodeURIComponent,
     },
 });
 
@@ -59,6 +60,7 @@ app.get('/instruments', async (req, res) => {
     const instruments = await db.all('SELECT id, name, description, origin_date FROM instruments LIMIT 6 OFFSET ?', [(page-1) * 6]);
     res.render('instruments', {
         user: req.user,
+        url: '/instruments',
         instruments, page, pages, totalPages,
         helpers: {
             isCurrentPage: (val) => val == page, 
