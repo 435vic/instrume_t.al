@@ -56,7 +56,9 @@ $form.addEventListener('submit', async (e) => {
     $submit.classList.toggle('is-loading', true); 
     $error.classList.toggle('is-hidden', true);
     const data = await handleLogin();
-    console.log(data);
     $submit.classList.toggle('is-loading', false); 
+    if (data) {
+        window.location.href = "/instruments";
+    }
 });
 

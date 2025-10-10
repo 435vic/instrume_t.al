@@ -38,12 +38,12 @@ class AuthManager {
         return null;
     }
 
-    middleware() {
+    withAuth() {
         return async (req, res, next) => {
             const session = req.cookies.session;
             if (!session) return next();
              
-            logger.info(`session ${session}`);
+            // logger.info(`session ${session}`);
             const user = await this.db.get(`
                 SELECT u.*
                 FROM users u
@@ -52,7 +52,7 @@ class AuthManager {
             `, [session]);
             if (!user) return next();
 
-            logger.info(`session found for {user.username}`);
+            logger.info(`session found for ${user.username}`);
 
             req.user = {
                 username: user.username,

@@ -4,6 +4,7 @@ import { open } from 'sqlite';
 import fs from 'fs';
 import path from 'path';
 import logger from './logger.js';
+import { readFile } from 'fs/promises';
 import { Database } from 'sqlite';
 
 const DB_LOCATION = process.env.DB_LOCATION || path.join(import.meta.dirname, '../database/');
@@ -24,7 +25,8 @@ logger.info(`db opened at ${DB_PATH}`);
   * @function init Initialize tables on the database.
   * @param {sqlite3.Database} db The Database object.
   */
-function init(db) {
+async function init(db) {
+    const instrument_data = JSON.parse(await readFile(path.join(import.meta.dirname, '../data/instruments.json'), 'utf-8'));
     db.serialize(() => {
         db.run(`CREATE TABLE IF NOT EXISTS users (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -40,27 +42,26 @@ function init(db) {
             valid_till DATETIME
         )`);
 
-        db.run(`INSERT INTO users(id, username, pass) VALUES (
-            0, -- admin id is hardcoded on purpose
-            'admin',
-            '$argon2id$v=19$m=65536,t=3,p=4$WFF2TjMc4ve3mdXvjp0c2A$nl5w/OWg6Q4+pGkXUn83UxMQyN759r3gszOW0cvWzAc'
+        db.run(`CREATE TABLE IF NOT EXISTS instruments (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            name TEXT NOT NULL,
+            description TEXT NOT NULL,
+            origin_date TEXT,
+            image_uri TEXT -- might not even be used honestly
         )`);
-    });
-}
 
-/**
-  * @function seed Add initial values to database
-  * @param {sqlite3.Database} db the database to seed
-  * @throws {Error} if the database is not empty
-  */
-function seed(db) {
-    db.serialize(() => {
-        // Admin user, credentials specified by course requirements
         db.run(`INSERT INTO users(id, username, pass) VALUES (
             0, -- admin id is hardcoded on purpose
             'admin',
             '$argon2id$v=19$m=65536,t=3,p=4$WFF2TjMc4ve3mdXvjp0c2A$nl5w/OWg6Q4+pGkXUn83UxMQyN759r3gszOW0cvWzAc'
         )`);
+
+        instrument_data.forEach((instrument) => {
+            db.run(
+                `INSERT INTO instruments(name, description, origin_date) VALUES (?, ?, ?)`,
+                [instrument.name, instrument.description, instrument.origin_date]
+            );
+        });
     });
 }
 

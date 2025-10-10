@@ -10,7 +10,7 @@
 		"sqlite3": "^5.1.7"
 	},
 	"scripts": {
-		"dev": "node --watch --watch-path . server.js | pino-pretty"
+		"dev": "node --watch server.js | pino-pretty"
 	},
 	"type": "module",
 	"devDependencies": {
