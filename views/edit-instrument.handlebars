@@ -1,0 +1,65 @@
+{{> page/nav }}
+
+<section class="section">
+    <div class="container">
+        <div class="columns is-centered">
+            <div class="column is-8-tablet is-6-desktop">
+                <h1 class="title">
+                    {{#if create}}
+                        Create New Instrument
+                    {{else}}
+                        Edit Instrument: {{instrument.name}}
+                    {{/if}}
+                </h1>
+
+                <form method="post" id="instrument">
+                    <div class="field">
+                        <label for="name" class="label">Name</label>
+                        <div class="control">
+                            <input type="text" class="input" id="name" name="name" value="{{instrument.name}}" placeholder="Enter instrument name" required>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label for="description" class="label">Description</label>
+                        <div class="control">
+                            <textarea class="textarea" id="description" name="description" placeholder="Enter instrument description" rows="6" required>{{instrument.description}}</textarea>
+                        </div>
+                    </div>
+
+                    {{#if error}}
+                    <article class="message is-danger">
+                        <div class="message-body">
+                            {{error}}
+                        </div>
+                    </article>
+                    {{/if}}
+
+                    <div class="field is-grouped mt-5">
+                        <div class="control">
+                            <button class="button is-primary" id="submit">
+                                <span class="icon">
+                                    {{#if create}}
+                                    <i class="fas fa-plus"></i>
+                                    {{else}}
+                                    <i class="fas fa-save"></i>
+                                    {{/if}}
+                                </span>
+                                <span>
+                                    {{#if create}}
+                                        Create Instrument
+                                    {{else}}
+                                        Save Changes
+                                    {{/if}}
+                                </span>
+                            </button>
+                        </div>
+                        <div class="control">
+                            <a href="{{#if create}}/instruments{{else}}/instruments/{{instrument.id}}{{/if}}" class="button is-light">Cancel</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

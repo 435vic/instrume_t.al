@@ -1,0 +1,41 @@
+<div class="box musician-card mb-4">
+    <article class="media">
+        <figure class="media-left">
+            <p class="image is-128x128">
+                <img src="https://bulma.io/assets/images/placeholders/128x128.png" alt="{{name}}">
+            </p>
+        </figure>
+        <div class="media-content">
+            <div class="content">
+                <div>
+                    <strong class="title is-4">{{name}}</strong>
+                    <small class="has-text-grey ml-2">{{nationality}}</small>
+                </div>
+                <p>{{description}}</p>
+                {{#if instruments}}
+                <div class="tags mt-2">
+                    {{#each instruments}}
+                    <span class="tag is-primary is-light">{{this}}</span>
+                    {{/each}}
+                </div>
+                {{/if}}
+            </div>
+        </div>
+        {{#if (isAdmin user)}}
+        <div class="media-right">
+            <div class="buttons">
+                <button class="button is-small" onclick="handleMusicianButton(this)" data-action="edit" data-forMusician="{{id}}">
+                    <span class="icon is-small">
+                        <i class="fas fa-edit"></i>
+                    </span>
+                </button>
+                <button class="button is-small is-danger" onclick="handleMusicianButton(this)" data-action="delete" data-forMusician="{{id}}">
+                    <span class="icon is-small">
+                        <i class="fas fa-trash"></i>
+                    </span>
+                </button>
+            </div>
+        </div>
+        {{/if}}
+    </article>
+</div>

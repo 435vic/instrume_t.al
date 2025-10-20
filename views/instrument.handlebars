@@ -1,0 +1,55 @@
+{{> page/nav }}
+
+<section class="section">
+    <div class="container">
+        {{#with instrument}}
+        <div class="columns is-centered">
+            <div class="column is-10">
+                <figure class="image is-3by2 mb-5">
+                    <img src="https://bulma.io/assets/images/placeholders/960x640.png" alt="{{name}}">
+                </figure>
+
+                <div class="content has-text-centered mb-5">
+                    <h1 class="title is-1">{{name}}</h1>
+                    {{#if origin_date}}
+                    <p class="subtitle is-5 has-text-grey">Origin: {{origin_date}}</p>
+                    {{/if}}
+                </div>
+
+                <div class="content is-medium">
+                    <p>{{description}}</p>
+                </div>
+
+                {{#if (isAdmin ../user)}}
+                <div class="has-text-centered mt-5">
+                    <a href="/instruments/{{id}}/edit" class="button is-primary">
+                        <span class="icon">
+                            <i class="fas fa-edit"></i>
+                        </span>
+                        <span>Edit Instrument</span>
+                    </a>
+                </div>
+                {{/if}}
+            </div>
+        </div>
+        {{/with}}
+    </div>
+</section>
+
+{{#if musicians}}
+<section class="section has-background-light">
+    <div class="container">
+        <h2 class="title is-3 mb-5">Musicians Who Play This Instrument</h2>
+        <div class="columns is-centered">
+            <div class="column is-10">
+                {{#each musicians}}
+                    <a href="/musicians/{{musician_id}}" class="has-text-dark">
+                        {{> musician-card }}
+                    </a>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</section>
+{{/if}}
+

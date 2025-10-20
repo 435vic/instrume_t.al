@@ -52,11 +52,9 @@ class AuthManager {
             `, [session]);
             if (!user) return next();
 
-            logger.info(`session found for ${user.username}`);
+            logger.debug(`session found for ${user.username}`);
 
-            req.user = {
-                username: user.username,
-            };
+            req.user = user;
             next();
         }
     }

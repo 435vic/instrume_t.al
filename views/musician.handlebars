@@ -1,0 +1,35 @@
+{{> page/nav }}
+
+<div class="container px-5 py-5">
+    <div class="columns">
+        <div class="column is-one-third">
+            <figure class="image is-square">
+                <img src="https://bulma.io/assets/images/placeholders/480x480.png" alt="{{musician.name}}">
+            </figure>
+        </div>
+        <div class="column">
+            <h1 class="title is-1">{{musician.name}}</h1>
+            <h2 class="subtitle is-4 has-text-grey">{{musician.nationality}}</h2>
+            <div class="content is-medium">
+                <p>{{musician.description}}</p>
+            </div>
+
+            {{#if instruments}}
+            <div class="mt-5">
+                <h3 class="title is-4">Instruments</h3>
+                <div class="columns is-multiline">
+                    {{#each instruments}}
+                    <div class="column is-half">
+                        <div class="box">
+                            <a href="/instruments/{{this.id}}" class="title is-5 has-text-primary">{{this.name}}</a>
+                            <p class="subtitle is-6 has-text-grey">{{this.origin_date}}</p>
+                            <p class="content">{{this.description}}</p>
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+            {{/if}}
+        </div>
+    </div>
+</div>

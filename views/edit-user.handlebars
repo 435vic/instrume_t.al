@@ -1,0 +1,79 @@
+{{> page/nav }}
+
+<div class="container px-5 py-5">
+    <h1 class="title">
+        {{#if create}}
+            Create New User
+        {{else}}
+            Edit User: {{editUser.username}}
+        {{/if}}
+    </h1>
+
+    <form method="post">
+        <div class="field">
+            <label for="username" class="label">Username</label>
+            <div class="control">
+                <input type="text" class="input" id="username" name="username" value="{{editUser.username}}" required>
+            </div>
+        </div>
+
+        <div class="field">
+            <label for="fname" class="label">First Name</label>
+            <div class="control">
+                <input type="text" class="input" id="fname" name="fname" value="{{editUser.fname}}">
+            </div>
+        </div>
+
+        <div class="field">
+            <label for="lname" class="label">Last Name</label>
+            <div class="control">
+                <input type="text" class="input" id="lname" name="lname" value="{{editUser.lname}}">
+            </div>
+        </div>
+
+        <div class="field">
+            <label for="password" class="label">
+                Password
+                {{#unless create}}
+                <span class="has-text-grey-light">(leave blank to keep current)</span>
+                {{/unless}}
+            </label>
+            <div class="control">
+                <input type="password" class="input" id="password" name="password" {{#if create}}required{{/if}}>
+            </div>
+        </div>
+
+        <div class="field">
+            <label for="confirm-password" class="label">Confirm Password</label>
+            <div class="control">
+                <input type="password" class="input" id="confirm-password" name="confirm_password">
+            </div>
+            {{#unless create}}
+            <p class="help">Only required if changing password</p>
+            {{/unless}}
+        </div>
+
+        <div class="field is-grouped mt-5">
+            <div class="control">
+                <button class="button is-primary" type="submit">
+                    {{#if create}}
+                        Create User
+                    {{else}}
+                        Save Changes
+                    {{/if}}
+                </button>
+            </div>
+            <div class="control">
+                <a href="/admin" class="button is-light">Cancel</a>
+            </div>
+        </div>
+    </form>
+
+    {{#if error}}
+    <article class="message is-danger mt-4">
+        <div class="message-body">
+            {{error}}
+        </div>
+    </article>
+    {{/if}}
+</div>

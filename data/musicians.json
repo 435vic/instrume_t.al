@@ -1,0 +1,766 @@
+[
+  {
+    "name": "Jacob Collier",
+    "nationality": "British",
+    "description": "A highly acclaimed singer, songwriter, multi-instrumentalist, and producer, known for his intricate harmonies and genre-defying music. He gained early fame on YouTube with multi-instrumental covers and has won multiple Grammy Awards.",
+    "instruments": [
+      "Piano",
+      "Electric Guitar",
+      "Acoustic Guitar",
+      "Electric Bass",
+      "Drum Set",
+      "Ukulele"
+    ]
+  },
+  {
+    "name": "Anoushka Shankar",
+    "nationality": "British, American, Indian descent",
+    "description": "Sitar player and composer, daughter of Ravi Shankar. She is a prominent figure in Indian classical music and contemporary world music, known for crossing genres and styles.",
+    "instruments": [
+      "Sitar",
+      "Piano"
+    ]
+  },
+  {
+    "name": "Brian Jones",
+    "nationality": "English",
+    "description": "Founding member and original multi-instrumentalist of The Rolling Stones. Known for introducing a variety of unique instruments, including Indian and African sounds, to the band's early recordings.",
+    "instruments": [
+      "Sitar",
+      "Saxophone",
+      "Piano",
+      "Marimba"
+    ]
+  },
+  {
+    "name": "Carolina Eyck",
+    "nationality": "German-Sorbian",
+    "description": "A renowned virtuoso theremin player, composer, and author. She developed a precise playing technique for the theremin and frequently performs with voice and orchestra.",
+    "instruments": [
+      "Theremin",
+      "Piano",
+      "Violin",
+      "Viola"
+    ]
+  },
+  {
+    "name": "Andy Narell",
+    "nationality": "American",
+    "description": "An internationally celebrated jazz steel pannist, composer, and music educator. He is a pioneer in bringing the steelpan into the jazz world and composing for steel orchestras.",
+    "instruments": [
+      "Steelpan",
+      "Piano"
+    ]
+  },
+  {
+    "name": "Gabby La La (Gabby Lang)",
+    "nationality": "American",
+    "description": "A vocalist and multi-instrumentalist whose music is often described as quirky and experimental. She is classically trained on the sitar and has collaborated with artists like Les Claypool.",
+    "instruments": [
+      "Sitar",
+      "Ukulele",
+      "Accordion",
+      "Theremin",
+      "Electric Guitar",
+      "Piano"
+    ]
+  },
+  {
+    "name": "William Barton",
+    "nationality": "Australian (Kalkadungu man)",
+    "description": "Australia's leading didgeridoo (Yidaki) player, as well as a composer, instrumentalist, and vocalist. He is known for blending traditional Aboriginal music with Western classical orchestras and various ensembles.",
+    "instruments": [
+      "Yidaki / Didgeridoo",
+      "Violin",
+      "Cello (Violoncello)"
+    ]
+  },
+  {
+    "name": "George Harrison",
+    "nationality": "English",
+    "description": "Lead guitarist of The Beatles. He was instrumental in introducing Indian classical music and instruments like the sitar to popular Western music.",
+    "instruments": [
+      "Electric Guitar",
+      "Acoustic Guitar",
+      "Sitar"
+    ]
+  },
+  {
+    "name": "Ravi Shankar",
+    "nationality": "Indian",
+    "description": "An iconic Indian sitar virtuoso and composer. He is credited with introducing the sitar and Indian classical music to a wider Western audience.",
+    "instruments": [
+      "Sitar"
+    ]
+  },
+  {
+    "name": "Famoudou Konaté",
+    "nationality": "Guinean",
+    "description": "A Malinké master drummer and a virtuoso of the djembe drum. He is dedicated to performing and preserving the traditional music of his people and was the lead djembe soloist for Les Ballets Africains.",
+    "instruments": [
+      "Djembe",
+      "Drum Set"
+    ]
+  },
+  {
+    "name": "Gordon Duncan",
+    "nationality": "Scottish",
+    "description": "One of the greatest and most innovative exponents of the Great Highland Bagpipes, known for his blend of traditional and contemporary influences, including his famed arrangement of AC/DC's 'Thunderstruck'.",
+    "instruments": [
+      "Great Highland Bagpipes",
+      "Flute"
+    ]
+  },
+  {
+    "name": "Naseer Shamma",
+    "nationality": "Iraqi",
+    "description": "A highly respected oud virtuoso, composer, and founder of The Arab Oud House. He has won numerous international awards and is known for his cross-cultural musical collaborations and humanitarian work.",
+    "instruments": [
+      "Oud"
+    ]
+  },
+  {
+    "name": "Stella Chiweshe",
+    "nationality": "Zimbabwean",
+    "description": "A Zimbabwean musician internationally known as the 'Queen of Mbira' for her singing and mastery of the mbira dzavadzimu, a traditional instrument of the Shona people. She was a pioneering female mbira player.",
+    "instruments": [
+      "Mbira"
+    ]
+  },
+  {
+	"name": "Ravi Shankar",
+	"nationality": "Indian",
+	"description": "Legendary sitar virtuoso and composer who popularized Indian classical music globally, collaborated with George Harrison and performed at Woodstock",
+	"instruments": ["Sitar"]
+  },
+  {
+	"name": "Anoushka Shankar",
+	"nationality": "British-Indian",
+	"description": "Renowned sitar player and composer, daughter of Ravi Shankar, known for innovative fusion of classical Indian music with modern influences",
+	"instruments": ["Sitar"]
+  },
+  {
+	"name": "Vilayat Khan",
+	"nationality": "Indian",
+	"description": "Master sitar player known for creating the gayaki ang technique which mimics the human voice, released first recording at age six",
+	"instruments": ["Sitar"]
+  },
+  {
+	"name": "Nikhil Banerjee",
+	"nationality": "Indian",
+	"description": "Child prodigy and master sitarist, revered as one of the greatest traditional sitarists of the 20th century",
+	"instruments": ["Sitar"]
+  },
+  {
+	"name": "George Harrison",
+	"nationality": "British",
+	"description": "The Beatles lead guitarist and acclaimed solo artist who helped popularize the sitar in Western music",
+	"instruments": ["Sitar", "Electric Guitar", "Acoustic Guitar"]
+  },
+  {
+	"name": "Brian Jones",
+	"nationality": "British",
+	"description": "Rolling Stones co-founder and multi-instrumentalist who played sitar on 'Paint It Black' and 'Street Fighting Man'",
+	"instruments": ["Sitar", "Electric Guitar", "Acoustic Guitar", "Harmonica"]
+  },
+  {
+	"name": "Emily Strayer",
+	"nationality": "American",
+	"description": "Original member of The Chicks, multi-instrumentalist proficient in banjo, sitar, accordion, and various stringed instruments",
+	"instruments": ["Sitar", "Banjo", "Accordion", "Violin", "Piano"]
+  },
+  {
+	"name": "Mamady Keïta",
+	"nationality": "Guinean",
+	"description": "Master djembe player, lead soloist of Djoliba National Ballet, founded Tam Tam Mandingue percussion school",
+	"instruments": ["Djembe", "Drum Set"]
+  },
+  {
+	"name": "Famoudou Konaté",
+	"nationality": "Guinean",
+	"description": "Master of Malinké drumming, lead djembe soloist in Les Ballets Africains for 28 years",
+	"instruments": ["Djembe"]
+  },
+  {
+	"name": "Babatunde Olatunji",
+	"nationality": "Nigerian-American",
+	"description": "World-renowned master drummer who introduced Americans to African drumming and spiritual depth of percussion",
+	"instruments": ["Djembe", "Drum Set"]
+  },
+  {
+	"name": "Ladji Camara",
+	"nationality": "Guinean",
+	"description": "Legendary lead djembe drummer with Les Ballet Africains, credited with popularizing the instrument globally",
+	"instruments": ["Djembe"]
+  },
+  {
+	"name": "Soungalo Coulibaly",
+	"nationality": "Malian",
+	"description": "Revered djembe player and composer known for intense energy and innovative rhythmic patterns",
+	"instruments": ["Djembe"]
+  },
+  {
+	"name": "Bolokada Conde",
+	"nationality": "Guinean",
+	"description": "Master djembe drummer and teacher, renowned for traditional Malinke beats",
+	"instruments": ["Djembe"]
+  },
+  {
+	"name": "Leon Mobley",
+	"nationality": "American",
+	"description": "World renowned percussionist, member of Grammy-winning Ben Harper and the Innocent Criminals, founder of Djembe West African Drummers and Dancers",
+	"instruments": ["Djembe", "Drum Set"]
+  },
+  {
+	"name": "Eric Rigler",
+	"nationality": "American",
+	"description": "Described as 'the most recorded bagpiper of all time', plays multiple forms of bagpipes and featured on numerous movie soundtracks",
+	"instruments": ["Great Highland Bagpipes"]
+  },
+  {
+	"name": "Martyn Bennett",
+	"nationality": "Canadian-Scottish",
+	"description": "Influential musician in modern Celtic fusion, known as 'the techno piper', blended traditional Celtic and modern music",
+	"instruments": ["Great Highland Bagpipes", "Violin"]
+  },
+  {
+	"name": "Gordon Duncan",
+	"nationality": "Scottish",
+	"description": "Bagpiper and composer known for innovative approach to traditional Scottish music",
+	"instruments": ["Great Highland Bagpipes"]
+  },
+  {
+	"name": "Jori Chisholm",
+	"nationality": "American",
+	"description": "Professional bagpipe player with Simon Fraser University Pipe Band, four-time US Gold Medal winner",
+	"instruments": ["Great Highland Bagpipes"]
+  },
+  {
+	"name": "Rufus Harley",
+	"nationality": "American",
+	"description": "First jazz musician to adopt the Great Highland bagpipe as primary instrument, performed with John Coltrane and Dizzy Gillespie",
+	"instruments": ["Great Highland Bagpipes", "Saxophone", "Flute"]
+  },
+  {
+	"name": "Michio Miyagi",
+	"nationality": "Japanese",
+	"description": "Blind composer and innovator who combined Western music with traditional koto, created 17-string bass koto",
+	"instruments": ["Koto"]
+  },
+  {
+	"name": "Kazue Sawai",
+	"nationality": "Japanese",
+	"description": "Master koto player finding new places for the instrument in jazz, experimental and pop music",
+	"instruments": ["Koto"]
+  },
+  {
+	"name": "June Kuramoto",
+	"nationality": "Japanese-American",
+	"description": "Member of jazz fusion group Hiroshima, one of the first to popularize koto in non-traditional fusion style",
+	"instruments": ["Koto"]
+  },
+  {
+	"name": "Curtis Patterson",
+	"nationality": "American",
+	"description": "First non-Japanese graduate of NHK master's program for traditional Japanese music performers, koto virtuoso based in Japan",
+	"instruments": ["Koto"]
+  },
+  {
+	"name": "Masayo Ishigure",
+	"nationality": "Japanese",
+	"description": "Multi-faceted koto and jiuta shamisen player who stretches the limits of koto while maintaining tradition",
+	"instruments": ["Koto"]
+  },
+  {
+	"name": "Djalu Gurruwiwi",
+	"nationality": "Australian Aboriginal",
+	"description": "Yolngu elder and master yidaki player, important custodian of the didgeridoo, dedicated to preserving traditional practices",
+	"instruments": ["Yidaki / Didgeridoo"]
+  },
+  {
+	"name": "William Barton",
+	"nationality": "Australian Aboriginal",
+	"description": "Leading didgeridoo player known for innovative fusion with classical music, performed with major orchestras worldwide",
+	"instruments": ["Yidaki / Didgeridoo"]
+  },
+  {
+	"name": "David Hudson",
+	"nationality": "Australian Aboriginal",
+	"description": "Cultural Journeyman of Australia, co-founded Tjapukai dance troupe, blends didgeridoo with various musical styles",
+	"instruments": ["Yidaki / Didgeridoo"]
+  },
+  {
+	"name": "Mark Atkins",
+	"nationality": "Australian Aboriginal",
+	"description": "Storyteller, songwriter, composer and painter, worked with Robert Plant, Jimmy Page, and Philip Glass",
+	"instruments": ["Yidaki / Didgeridoo"]
+  },
+  {
+	"name": "Alan Dargin",
+	"nationality": "Australian Aboriginal",
+	"description": "First didgeridoo virtuoso who developed contemporary playing techniques, performed with Vienna Philharmonic and London Symphony",
+	"instruments": ["Yidaki / Didgeridoo"]
+  },
+  {
+	"name": "Charlie McMahon",
+	"nationality": "Australian",
+	"description": "Father of contemporary didgeridoo, founder of Gondwanaland Project, inventor of the didjeribone (sliding didgeridoo)",
+	"instruments": ["Yidaki / Didgeridoo"]
+  },
+  {
+	"name": "Xavier Rudd",
+	"nationality": "Australian",
+	"description": "Singer and multi-instrumentalist who frequently features didgeridoo in his performances",
+	"instruments": ["Yidaki / Didgeridoo", "Acoustic Guitar", "Electric Guitar"]
+  },
+  {
+	"name": "Munir Bashir",
+	"nationality": "Iraqi",
+	"description": "Master oud player who perfected the Arab Maqamat genre, one of the greatest Middle Eastern musicians of the 20th century",
+	"instruments": ["Oud"]
+  },
+  {
+	"name": "Riyad Al Sunbati",
+	"nationality": "Egyptian",
+	"description": "World-class composer, singer, and oud player who composed over 500 pieces for Egyptian cinema and opera",
+	"instruments": ["Oud"]
+  },
+  {
+	"name": "Farid al-Atrash",
+	"nationality": "Syrian-Egyptian",
+	"description": "Virtuoso oud player, composer, singer, and actor with a prolific four-decade career",
+	"instruments": ["Oud"]
+  },
+  {
+	"name": "Naseer Shamma",
+	"nationality": "Iraqi-Kurdish",
+	"description": "World-renowned oud player and poet, founder of the Arabic Oud House in Cairo",
+	"instruments": ["Oud"]
+  },
+  {
+	"name": "Simon Shaheen",
+	"nationality": "Palestinian-American",
+	"description": "Contemporary master with impeccable technique, oud and violin virtuoso, Arabic music lecturer",
+	"instruments": ["Oud", "Violin"]
+  },
+  {
+	"name": "Ara Dinkjian",
+	"nationality": "Armenian-American",
+	"description": "World-renowned oud player and composer, founder of Night Ark, song 'Dinata Dinata' performed at 2004 Athens Olympics closing",
+	"instruments": ["Oud"]
+  },
+  {
+	"name": "Rahim Al Haj",
+	"nationality": "Iraqi-American",
+	"description": "World-class composer and oud player, student of Munir Bashir, known for impressive playing and political activism",
+	"instruments": ["Oud"]
+  },
+  {
+	"name": "Stella Chiweshe",
+	"nationality": "Zimbabwean",
+	"description": "Mbira queen and pioneer, one of the first women to play mbira publicly, used music for socio-political commentary",
+	"instruments": ["Mbira"]
+  },
+  {
+	"name": "Hope Masike",
+	"nationality": "Zimbabwean",
+	"description": "Known as the 'princess of mbira', contemporary custodian creating bold urban fusion music with the mbira",
+	"instruments": ["Mbira"]
+  },
+  {
+	"name": "Thomas Mapfumo",
+	"nationality": "Zimbabwean",
+	"description": "Known as Mukanya, 'Lion of Zimbabwe', fathered electric mbira music and developed chimurenga music style",
+	"instruments": ["Mbira", "Electric Guitar", "Acoustic Guitar"]
+  },
+  {
+	"name": "Fradreck Mujuru",
+	"nationality": "Zimbabwean",
+	"description": "One of the greatest mbira players alive, master of multiple mbira tunings, renowned instrument maker",
+	"instruments": ["Mbira"]
+  },
+  {
+	"name": "Erica Azim",
+	"nationality": "American",
+	"description": "Respected teacher and scholar of mbira, studied traditional Zimbabwean music extensively",
+	"instruments": ["Mbira"]
+  },
+  {
+	"name": "Maurice White",
+	"nationality": "American",
+	"description": "Founder of Earth, Wind & Fire, helped popularize mbira in the 1960s-70s by incorporating it with modern rock instruments",
+	"instruments": ["Mbira", "Drum Set"]
+  },
+  {
+	"name": "Ellie Mannette",
+	"nationality": "Trinidadian-American",
+	"description": "Father of the Modern Steel Drum, developed concave sinking technique, creator of double seconds pan",
+	"instruments": ["Steelpan"]
+  },
+  {
+	"name": "Winston 'Spree' Simon",
+	"nationality": "Trinidadian",
+	"description": "Inventor of the ping pong pan (tenor pan), pioneered steelpan development, master tuner",
+	"instruments": ["Steelpan"]
+  },
+  {
+	"name": "Lennox 'Boogsie' Sharpe",
+	"nationality": "Trinidadian",
+	"description": "Living legend with perfect pitch, dazzling virtuosity, arranger for Phase II Pan Groove with 7 Panorama wins",
+	"instruments": ["Steelpan"]
+  },
+  {
+	"name": "Jit Samaroo",
+	"nationality": "Trinidadian",
+	"description": "Known as 'Dr. Jit', one of the most prolific arrangers, led Renegades to 9 Panorama victories",
+	"instruments": ["Steelpan"]
+  },
+  {
+	"name": "Sterling Betancourt",
+	"nationality": "Trinidadian-British",
+	"description": "Pioneer and musician, original TASPO player who premiered steel pan at 1951 Festival of Britain",
+	"instruments": ["Steelpan"]
+  },
+  {
+	"name": "Othello Molineaux",
+	"nationality": "Trinidadian-American",
+	"description": "First to use steelpan in jazz medium, worked with Jaco Pastorius, Monty Alexander, and Chicago",
+	"instruments": ["Steelpan"]
+  },
+  {
+	"name": "Leon Theremin",
+	"nationality": "Russian",
+	"description": "Inventor of the theremin, first to perform using the instrument, performed for Lenin and New York Philharmonic",
+	"instruments": ["Theremin"]
+  },
+  {
+	"name": "Clara Rockmore",
+	"nationality": "Lithuanian-American",
+	"description": "Violin prodigy turned theremin virtuoso, helped popularize the instrument in classical music",
+	"instruments": ["Theremin"]
+  },
+  {
+	"name": "Carolina Eyck",
+	"nationality": "German",
+	"description": "Theremin revolutionist who developed her own technique, performed at Kennedy Center and Walt Disney Concert Hall",
+	"instruments": ["Theremin"]
+  },
+  {
+	"name": "Dorit Chrysler",
+	"nationality": "Austrian-American",
+	"description": "Composer, producer, singer, and theremin wizard, co-founder of New York Theremin Society",
+	"instruments": ["Theremin"]
+  },
+  {
+	"name": "Pamelia Kurstin",
+	"nationality": "American",
+	"description": "Innovative theremin player with jazz background, pioneered walking bass lines on theremin",
+	"instruments": ["Theremin"]
+  },
+  {
+	"name": "Lydia Kavina",
+	"nationality": "Russian",
+	"description": "Granddaughter of Léon Theremin's first cousin, master teacher and performer",
+	"instruments": ["Theremin"]
+  },
+  {
+	"name": "Prince",
+	"nationality": "American",
+	"description": "Legendary multi-instrumentalist who played 27+ instruments on his debut album, mastered guitar, piano, bass, drums, and saxophone",
+	"instruments": ["Electric Guitar", "Acoustic Guitar", "Electric Bass", "Piano", "Drum Set", "Saxophone"]
+  },
+  {
+	"name": "Paul McCartney",
+	"nationality": "British",
+	"description": "The Beatles bassist and legendary multi-instrumentalist proficient with 54 musical instruments",
+	"instruments": ["Electric Bass", "Acoustic Guitar", "Electric Guitar", "Piano", "Drum Set", "Trumpet"]
+  },
+  {
+	"name": "Stevie Wonder",
+	"nationality": "American",
+	"description": "Legendary singer and multi-instrumentalist, virtuoso on keyboard instruments and harmonica",
+	"instruments": ["Piano", "Harmonica", "Drum Set"]
+  },
+  {
+	"name": "Jimi Hendrix",
+	"nationality": "American",
+	"description": "Revolutionary electric guitar virtuoso, considered one of the greatest guitarists of all time",
+	"instruments": ["Electric Guitar"]
+  },
+  {
+	"name": "Eric Clapton",
+	"nationality": "British",
+	"description": "Blues-rock guitar legend, known for work with Cream, Derek and the Dominos, and solo career",
+	"instruments": ["Electric Guitar", "Acoustic Guitar"]
+  },
+  {
+	"name": "Yo-Yo Ma",
+	"nationality": "American-French",
+	"description": "World-renowned cellist, multiple Grammy Award winner, known for classical and cross-cultural collaborations",
+	"instruments": ["Cello (Violoncello)"]
+  },
+  {
+	"name": "Itzhak Perlman",
+	"nationality": "Israeli-American",
+	"description": "Violin virtuoso and conductor, one of the world's preeminent violinists",
+	"instruments": ["Violin"]
+  },
+  {
+	"name": "Miles Davis",
+	"nationality": "American",
+	"description": "Jazz legend and trumpet virtuoso who revolutionized jazz multiple times throughout his career",
+	"instruments": ["Trumpet"]
+  },
+  {
+	"name": "Louis Armstrong",
+	"nationality": "American",
+	"description": "Jazz pioneer and trumpet virtuoso, one of the most influential figures in jazz history",
+	"instruments": ["Trumpet"]
+  },
+  {
+	"name": "Herbie Hancock",
+	"nationality": "American",
+	"description": "Jazz piano legend and composer, pioneer in jazz fusion and electronic music",
+	"instruments": ["Piano"]
+  },
+  {
+	"name": "Lang Lang",
+	"nationality": "Chinese",
+	"description": "International piano superstar known for virtuosic performances and passionate style",
+	"instruments": ["Piano"]
+  },
+  {
+	"name": "John Coltrane",
+	"nationality": "American",
+	"description": "Jazz saxophone legend and composer, influential in bebop and free jazz",
+	"instruments": ["Saxophone"]
+  },
+  {
+	"name": "Charlie Parker",
+	"nationality": "American",
+	"description": "Bebop pioneer and alto saxophone virtuoso, one of the most influential jazz musicians",
+	"instruments": ["Saxophone"]
+  },
+  {
+	"name": "James Galway",
+	"nationality": "Irish",
+	"description": "Renowned flutist known as 'the man with the golden flute', former principal flute of Berlin Philharmonic",
+	"instruments": ["Flute"]
+  },
+  {
+	"name": "Jean-Pierre Rampal",
+	"nationality": "French",
+	"description": "Legendary flutist who brought the flute to prominence as a solo concert instrument",
+	"instruments": ["Flute"]
+  },
+  {
+	"name": "Buddy Rich",
+	"nationality": "American",
+	"description": "Legendary jazz drummer known as one of the greatest drummers in history",
+	"instruments": ["Drum Set"]
+  },
+  {
+	"name": "Neil Peart",
+	"nationality": "Canadian",
+	"description": "Rush drummer and lyricist, known for complex compositions and technical mastery",
+	"instruments": ["Drum Set"]
+  },
+  {
+	"name": "Dave Grohl",
+	"nationality": "American",
+	"description": "Nirvana drummer and Foo Fighters frontman, multi-instrumentalist proficient on drums, guitar, piano, and bass",
+	"instruments": ["Drum Set", "Electric Guitar", "Acoustic Guitar", "Piano", "Electric Bass"]
+  },
+  {
+	"name": "Benny Goodman",
+	"nationality": "American",
+	"description": "The 'King of Swing', legendary jazz clarinetist and bandleader",
+	"instruments": ["Clarinet"]
+  },
+  {
+	"name": "Artie Shaw",
+	"nationality": "American",
+	"description": "Swing era clarinetist, bandleader, and composer known for innovative arrangements",
+	"instruments": ["Clarinet"]
+  },
+  {
+	"name": "Jaco Pastorius",
+	"nationality": "American",
+	"description": "Revolutionary electric bass virtuoso who transformed the instrument's role in jazz and fusion",
+	"instruments": ["Electric Bass"]
+  },
+  {
+	"name": "Victor Wooten",
+	"nationality": "American",
+	"description": "Five-time Grammy-winning bassist known for innovative techniques and musicality",
+	"instruments": ["Electric Bass"]
+  },
+  {
+	"name": "Joanna Newsom",
+	"nationality": "American",
+	"description": "Singer-songwriter and harpist known for complex compositions and distinctive voice",
+	"instruments": ["Harp", "Piano"]
+  },
+  {
+	"name": "Harpo Marx",
+	"nationality": "American",
+	"description": "Comedian and virtuoso harpist, member of the Marx Brothers comedy team",
+	"instruments": ["Harp"]
+  },
+  {
+	"name": "Tommy Dorsey",
+	"nationality": "American",
+	"description": "Big band leader and trombone virtuoso known as 'The Sentimental Gentleman of Swing'",
+	"instruments": ["Trombone"]
+  },
+  {
+	"name": "J.J. Johnson",
+	"nationality": "American",
+	"description": "Jazz trombone pioneer who revolutionized bebop trombone playing",
+	"instruments": ["Trombone"]
+  },
+  {
+	"name": "Béla Fleck",
+	"nationality": "American",
+	"description": "Virtuoso banjo player who has taken the instrument far beyond bluegrass into jazz and classical",
+	"instruments": ["Banjo"]
+  },
+  {
+	"name": "Earl Scruggs",
+	"nationality": "American",
+	"description": "Bluegrass legend who developed the three-finger banjo picking style that bears his name",
+	"instruments": ["Banjo"]
+  },
+  {
+	"name": "Heinz Holliger",
+	"nationality": "Swiss",
+	"description": "World-renowned oboist, composer, and conductor",
+	"instruments": ["Oboe"]
+  },
+  {
+	"name": "Marcel Tabuteau",
+	"nationality": "French-American",
+	"description": "Legendary oboist who shaped American oboe playing style",
+	"instruments": ["Oboe"]
+  },
+  {
+	"name": "Lionel Hampton",
+	"nationality": "American",
+	"description": "Jazz vibraphonist and bandleader who pioneered the vibraphone in jazz and also played xylophone",
+	"instruments": ["Xylophone"]
+  },
+  {
+	"name": "Red Norvo",
+	"nationality": "American",
+	"description": "Jazz musician who pioneered the xylophone and vibraphone in jazz",
+	"instruments": ["Xylophone"]
+  },
+  {
+	"name": "Astor Piazzolla",
+	"nationality": "Argentine",
+	"description": "Revolutionary tango composer and bandoneón virtuoso who created nuevo tango, also played accordion",
+	"instruments": ["Accordion"]
+  },
+  {
+	"name": "Yvette Horner",
+	"nationality": "French",
+	"description": "French accordionist who popularized musette music",
+	"instruments": ["Accordion"]
+  },
+  {
+	"name": "Dennis Brain",
+	"nationality": "British",
+	"description": "Legendary French horn virtuoso considered the greatest horn player of the 20th century",
+	"instruments": ["French Horn"]
+  },
+  {
+	"name": "Philip Farkas",
+	"nationality": "American",
+	"description": "Renowned French horn player and influential teacher",
+	"instruments": ["French Horn"]
+  },
+  {
+	"name": "Jake Shimabukuro",
+	"nationality": "American",
+	"description": "Ukulele virtuoso who has taken the instrument to new heights with complex arrangements and techniques",
+	"instruments": ["Ukulele"]
+  },
+  {
+	"name": "Israel Kamakawiwoʻole",
+	"nationality": "Hawaiian",
+	"description": "Beloved Hawaiian musician whose medley of 'Over the Rainbow/What a Wonderful World' became iconic",
+	"instruments": ["Ukulele"]
+  },
+  {
+	"name": "Keiko Abe",
+	"nationality": "Japanese",
+	"description": "Marimba virtuoso who has commissioned over 300 pieces for the instrument",
+	"instruments": ["Marimba"]
+  },
+  {
+	"name": "Leigh Howard Stevens",
+	"nationality": "American",
+	"description": "Marimba virtuoso who developed the Stevens Grip technique",
+	"instruments": ["Marimba"]
+  },
+  {
+	"name": "Jacob Collier",
+	"nationality": "British",
+	"description": "Multi-Grammy winning multi-instrumentalist proficient on vocals, piano, keyboards, bass, drums, guitar and many more instruments",
+	"instruments": ["Piano", "Electric Bass", "Drum Set", "Electric Guitar", "Acoustic Guitar"]
+  },
+  {
+	"name": "Sting",
+	"nationality": "British",
+	"description": "The Police bassist and solo artist, multi-instrumentalist playing bass, guitar, piano, and various other instruments",
+	"instruments": ["Electric Bass", "Acoustic Guitar", "Electric Guitar", "Piano", "Saxophone"]
+  },
+  {
+	"name": "Beck",
+	"nationality": "American",
+	"description": "Alternative rock multi-instrumentalist who plays guitar, drums, sitar, banjo, and over 12 instruments",
+	"instruments": ["Electric Guitar", "Acoustic Guitar", "Drum Set", "Banjo"]
+  },
+  {
+	"name": "Sufjan Stevens",
+	"nationality": "American",
+	"description": "Indie folk multi-instrumentalist credited with playing 27+ instruments including guitar, banjo, piano, drums, and various wind and brass instruments",
+	"instruments": ["Acoustic Guitar", "Electric Guitar", "Piano", "Banjo", "Drum Set", "Flute", "Oboe"]
+  },
+  {
+	"name": "Trent Reznor",
+	"nationality": "American",
+	"description": "Nine Inch Nails founder who plays over 25 instruments including synthesizers, guitar, piano, saxophone, and cello",
+	"instruments": ["Piano", "Electric Guitar", "Saxophone", "Cello (Violoncello)", "Drum Set"]
+  },
+  {
+	"name": "Flea",
+	"nationality": "American-Australian",
+	"description": "Red Hot Chili Peppers bassist who also plays trumpet and piano, studied jazz trumpet as a child",
+	"instruments": ["Electric Bass", "Trumpet", "Piano"]
+  },
+  {
+	"name": "Jack White",
+	"nationality": "American",
+	"description": "The White Stripes frontman, multi-instrumentalist proficient on guitar, piano, drums, and various vintage instruments",
+	"instruments": ["Electric Guitar", "Acoustic Guitar", "Piano", "Drum Set"]
+  },
+  {
+	"name": "Dolly Parton",
+	"nationality": "American",
+	"description": "Country music legend who plays banjo, guitar, piano, autoharp, violin, and saxophone",
+	"instruments": ["Banjo", "Acoustic Guitar", "Piano", "Violin", "Saxophone"]
+  },
+  {
+	"name": "Taj Mahal",
+	"nationality": "American",
+	"description": "Blues musician who plays guitar, piano, banjo, harmonica, and many other instruments, incorporating world music elements",
+	"instruments": ["Acoustic Guitar", "Electric Guitar", "Piano", "Banjo"]
+  },
+  {
+	"name": "Sammy Davis Jr.",
+	"nationality": "American",
+	"description": "Legendary entertainer who played trumpet, drums, guitar, bass, violin, saxophone, and piano",
+	"instruments": ["Trumpet", "Drum Set", "Acoustic Guitar", "Electric Bass", "Violin", "Saxophone", "Piano"]
+  }
+]

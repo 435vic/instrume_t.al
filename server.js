@@ -6,6 +6,10 @@ import { fileURLToPath } from 'node:url';
 import cookieParser from 'cookie-parser';
 import { getDatabase } from './src/db.js';
 import api from './src/rest.js';
+import { adminOnly } from './src/util.js';
+import instruments from './src/routes/instruments.js';
+import musicians from './src/routes/musicians.js';
+import admin from './src/routes/admin.js';
 
 const app = express();
 const db = getDatabase();
@@ -13,6 +17,8 @@ const handlebars = create({
     helpers: {
         isAdmin: (user) => user?.username == 'admin',
         encodeURI: encodeURIComponent,
+        eq: (a, b) => a === b,
+        or: (a, b) => a || b,
     },
 });
 
@@ -24,6 +30,9 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(auth.withAuth());
 app.use('/api/v1', auth.withAuth(), api);
+app.use('/instruments', instruments);
+app.use('/musicians', musicians);
+app.use('/admin', adminOnly, admin);
 app.use('/static', express.static(fileURLToPath(import.meta.resolve('./public'))));
 
 app.get('/login', (req, res) => {
@@ -51,29 +60,13 @@ app.get('/logout', (req, res) => {
     res.redirect('/');
 });
 
-app.get('/instruments', async (req, res) => {
-    const instrumentCount = (await db.get('SELECT COUNT(*) as cnt FROM instruments')).cnt;
-    const totalPages = Math.ceil(instrumentCount / 6);
-    const page = req.query.page <= totalPages ? req.query.page : 1;
-    // used for rendering the pagination section
-    const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
-    const instruments = await db.all('SELECT id, name, description, origin_date FROM instruments LIMIT 6 OFFSET ?', [(page-1) * 6]);
-    res.render('instruments', {
-        user: req.user,
-        url: '/instruments',
-        instruments, page, pages, totalPages,
-        helpers: {
-            isCurrentPage: (val) => val == page, 
-        },
-    });
+app.get('/profile', (req, res) => {
+    res.render('profile', { user: req.user, fullname: `${req.user.fname} ${req.user.lname}`.trim() });
 });
 
-app.get('/whoami', (req, res) => {
-    res.render('whoami', { user: req.user });
-});
 
 app.get('/', (req, res) => {
-    res.render('home');
+    res.render('home', { user: req.user} );
 });
 
 app.listen(3000);

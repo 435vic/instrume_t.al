@@ -1,0 +1,94 @@
+{{> page/nav }}
+
+<div class="container px-5 py-5">
+    <h1 class="title mb-5">Administer Users</h1>
+    <table class="table is-fullwidth is-striped">
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Last Name</th>
+                <th>First Name</th>
+                <th>Created at</th>
+                <th style="width: 1%; white-space: nowrap;"></th>
+                <th style="width: 1%; white-space: nowrap;"></th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each users}}
+                <tr>
+                    <td>{{username}}</td>
+                    <td>{{lname}}</td>
+                    <td>{{fname}}</td>
+                    <td>{{created_at}}</td>
+                    <td style="padding: 0.5rem 0.25rem;">
+                        <a href="/admin/users/{{id}}/edit" class="button is-small is-ghost is-info">
+                            <span class="icon is-small">
+                                <i class="fas fa-edit"></i>
+                            </span>
+                        </a>
+                    </td>
+                    <td style="padding: 0.5rem 0.25rem;">
+                        {{#if (or (eq username "admin") (eq username ../user.username))}}
+                            <button class="button is-small is-ghost is-danger" disabled data-tooltip="{{#if (eq username "admin")}}Cannot delete admin user{{else}}Cannot delete your own account{{/if}}">
+                                <span class="icon is-small">
+                                    <i class="fas fa-trash"></i>
+                                </span>
+                            </button>
+                        {{else}}
+                            <form method="POST" action="/admin/users/{{id}}/delete" style="display: inline;">
+                                <button type="submit" class="button is-small is-ghost is-danger">
+                                    <span class="icon is-small">
+                                        <i class="fas fa-trash"></i>
+                                    </span>
+                                </button>
+                            </form>
+                        {{/if}}
+                    </td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+    <div class="mt-4">
+        <a href="/admin/users/new" class="button is-primary">
+            <span class="icon is-small">
+                <i class="fas fa-plus"></i>
+            </span>
+            <span>Add New User</span>
+        </a>
+    </div>
+</div>
+
+<style>
+[data-tooltip] {
+    position: relative;
+    cursor: not-allowed;
+}
+
+[data-tooltip]:hover::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.5rem 0.75rem;
+    background-color: #363636;
+    color: white;
+    border-radius: 4px;
+    white-space: nowrap;
+    font-size: 0.75rem;
+    margin-bottom: 0.25rem;
+    z-index: 1000;
+}
+
+[data-tooltip]:hover::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 4px solid transparent;
+    border-top-color: #363636;
+    z-index: 1000;
+}
+</style>
+

@@ -4,8 +4,6 @@ async function handleCardButton(element) {
         element.classList.toggle('is-loading', true);
         await deleteInstrument(forinstrument);
         element.classList.toggle('is-loading', false);
-    } else if (action == "edit") {
-
     }
 }
 

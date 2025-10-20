@@ -1,0 +1,38 @@
+{{> page/nav }}
+
+<div class="container px-5 py-5">
+    <div class="is-flex is-justify-content-space-between is-align-items-center mb-5">
+        <h1 class="title mb-0">Musicians</h1>
+        {{#if (isAdmin user)}}
+        <a href="/musicians/new" class="button">
+            <span class="icon is-small">
+                <i class="fas fa-add"></i>
+            </span>
+        </a>
+        {{/if}}
+    </div>
+
+    {{#each musicians}}
+        <a href="/musicians/{{this.id}}" class="has-text-dark">
+            {{> musician-card}}
+        </a>
+    {{/each}}
+</div>
+
+<nav class="pagination is-centered" role="pagination" aria-label="pagination">
+    <ul class="pagination-list">
+        {{#each pages}}
+            <li><a href="?page={{this}}" class="pagination-link {{#if (isCurrentPage this)}}is-current{{/if}}">{{this}}</a></li>
+        {{/each}}
+    </ul>
+</nav>
+
+<style>
+.musician-card {
+    transition: transform 0.1s ease-in-out;
+}
+
+a:hover .musician-card {
+    transform: translate(2px, -2px);
+}
+</style>

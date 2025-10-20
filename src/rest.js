@@ -1,17 +1,9 @@
 import express from 'express';
 import { getDatabase } from './db.js';
+import { adminOnly } from './util.js';
 
 const api = express.Router();
 const db = getDatabase();
-
-function adminOnly(req, res, next) {
-    if (req.user?.username !== 'admin') {
-        res.status(403);
-        next(new Error('Unauthorized'));
-    } else {
-        next();
-    }
-}
 
 api.delete('/instruments/:id', adminOnly, async (req, res) => {
     const id = parseInt(req.params.id);

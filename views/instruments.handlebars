@@ -1,33 +1,70 @@
 {{> page/nav }}
 
-<h1 class="title">Instruments</h1>
-<div class="fixed-grid has-1-cols-mobile has-2-cols-tablet has-3-cols-desktop">
-    <div class="grid is-gap-5 px-5">
+<style>
+.cell:hover {
+    transform: translate(2px, -2px); 
+}
+
+.cell {
+   transition: transform 0.1s ease-in-out; 
+}
+
+.card-link::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.card button, .card a:not(.card-link) {
+    position: relative;
+    z-index: 2;
+}
+</style>
+
+<div class="fixed-grid px-5 has-1-cols-mobile has-2-cols-tablet has-3-cols-desktop">
+    <div class="container is-flex is-justify-content-space-between is-align-items-center mb-5">
+        <h1 class="title mb-0">Instruments</h1>
+        {{#if (isAdmin user)}}
+        <a href="/instruments/new" class="button">
+            <span class="icon is-small">
+                <i class="fas fa-add"></i>
+            </span>
+        </a>
+        {{/if}}
+    </div>
+    <div class="grid is-gap-5">
     {{#each instruments}}
-        <div class="cell" id="instrument-cell-{{this.id}}">
-            <div class="card">
-                <div class="card-image">
-                    <figure class="image is-4by3">
-                        <img src="https://bulma.io/assets/images/placeholders/1280x960.png" alt="Placeholder image">
-                    </figure>
+            <div class="cell" id="instrument-cell-{{this.id}}">
+                <div class="card is-relative">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="https://bulma.io/assets/images/placeholders/1280x960.png" alt="Placeholder image">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <p class="title"><a class="has-text-white card-link" href="/instruments/{{id}}">{{this.name}}</a></p>
+                            <p class="subtitle">{{this.origin_date}}</p>
+                            <p class="content">{{this.description}}</p>
+                        </div>
+                    {{#if (isAdmin ../user)}}
+                    <footer class="card-footer">
+                        <div class="card-footer-item">
+                            {{!-- <button class="button" onclick="handleCardButton(this)" data-action="edit" data-forInstrument="{{this.id}}"><span class="icon">✏️</span></button> --}}
+                            <a class="button" href="/instruments/{{this.id}}/edit"><span class="icon">✏️</span></a>
+                        </div>
+                        <div class="card-footer-item">
+                            <form method="POST" action="/instruments/{{this.id}}/delete" style="display: inline;">
+                                <button type="submit" class="button"><span class="icon">🗑️</span></button>
+                            </form>
+                        </div>
+                    </footer>
+                    {{/if}}
                 </div>
-                <div class="card-content">
-                    <p class="title">{{this.name}}</p>
-                    <p class="subtitle">{{this.origin_date}}</p>
-                    <p class="content">{{this.description}}</p>
-                </div>
-                {{#if (isAdmin ../user)}}
-                <footer class="card-footer">
-                    <div class="card-footer-item">
-                        <button class="button" onclick="handleCardButton(this)" data-action="edit" data-forInstrument="{{this.id}}"><span class="icon">✏️</span></button>
-                    </div>
-                    <div class="card-footer-item">
-                        <button class="button" onclick="handleCardButton(this)" data-action="delete" data-forInstrument="{{this.id}}"><span class="icon">🗑️</span></button>
-                    </div>
-                </footer>
-                {{/if}}
             </div>
-        </div>
     {{/each}}
     </div>
 </div>
