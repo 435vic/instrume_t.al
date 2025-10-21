@@ -81,8 +81,8 @@ async function init(db) {
         // Insert instruments
         instrument_data.forEach((instrument) => {
             db.run(
-                `INSERT INTO instruments(name, description, origin_date) VALUES (?, ?, ?)`,
-                [instrument.name, instrument.description, instrument.origin_date]
+                `INSERT INTO instruments(name, description, origin_date, image_uri) VALUES (?, ?, ?, ?)`,
+                [instrument.name, instrument.description, instrument.origin_date, instrument.image_uri || null]
             );
         });
 

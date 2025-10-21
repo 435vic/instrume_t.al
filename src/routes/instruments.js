@@ -14,7 +14,7 @@ instruments.get('/', async (req, res) => {
     const page = req.query.page <= totalPages ? req.query.page : 1;
     // used for rendering the pagination section
     const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
-    const instruments = await db.all('SELECT id, name, description, origin_date FROM instruments LIMIT 6 OFFSET ?', [(page-1) * 6]);
+    const instruments = await db.all('SELECT * FROM instruments LIMIT 6 OFFSET ?', [(page-1) * 6]);
     res.render('instruments', {
         user: req.user,
         url: '/instruments',
@@ -31,12 +31,17 @@ instruments.get('/new', adminOnly, (req, res) => {
 
 instruments.post('/new', adminOnly, async (req, res) => {
     logger.info(req.body);
-    if (Object.values(req.body).some((v) => !v)) {
+    if (!req.body.name || !req.body.description) {
         return res.render('edit-instrument', {
-            error: "Please fill out all fields."
+            error: "Please fill out all required fields.",
+            create: true,
+            instrument: req.body
         });
     }
-    await db.run('INSERT INTO instruments (name, description) VALUES (?, ?)', [req.body.name, req.body.description]);
+    await db.run(
+        'INSERT INTO instruments (name, description, origin_date, image_uri) VALUES (?, ?, ?, ?)',
+        [req.body.name, req.body.description, req.body.origin_date || null, req.body.image_uri || null]
+    );
     res.redirect('/instruments');
 });
 
@@ -76,14 +81,15 @@ instruments.get('/:id/edit', adminOnly, (req, res) => {
 
 instruments.post('/:id/edit', adminOnly, async (req, res) => {
     const result = await db.run(
-        // 'UPDATE instruments SET (name, description) VALUES req.body.name, req.body.description, req.params.id(?, ?) WHERE id = ?',
         `
             UPDATE instruments
             SET name = ?,
-                description = ?
+                description = ?,
+                origin_date = ?,
+                image_uri = ?
             WHERE id = ?
         `,
-        [req.body.name, req.body.description, req.params.id]
+        [req.body.name, req.body.description, req.body.origin_date || null, req.body.image_uri || null, req.params.id]
     );
     logger.info(result);
     res.redirect(`/instruments/${req.params.id}`);

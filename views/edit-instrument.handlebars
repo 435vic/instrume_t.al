@@ -27,6 +27,21 @@
                         </div>
                     </div>
 
+                    <div class="field">
+                        <label for="origin_date" class="label">Origin Date</label>
+                        <div class="control">
+                            <input type="text" class="input" id="origin_date" name="origin_date" value="{{instrument.origin_date}}" placeholder="e.g., 1739 or c. 1400">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label for="image_uri" class="label">Image URL</label>
+                        <div class="control">
+                            <input type="url" class="input" id="image_uri" name="image_uri" value="{{instrument.image_uri}}" placeholder="https://example.com/image.jpg">
+                        </div>
+                        <p class="help">Enter the URL of the instrument image</p>
+                    </div>
+
                     {{#if error}}
                     <article class="message is-danger">
                         <div class="message-body">

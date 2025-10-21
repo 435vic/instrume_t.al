@@ -42,7 +42,7 @@
                 <div class="card is-relative">
                         <div class="card-image">
                             <figure class="image is-4by3">
-                                <img src="https://bulma.io/assets/images/placeholders/1280x960.png" alt="Placeholder image">
+                                <img src="{{#if this.image_uri}}{{this.image_uri}}{{else}}https://bulma.io/assets/images/placeholders/1280x960.png{{/if}}" alt="{{this.name}}" style="object-fit: cover;">
                             </figure>
                         </div>
                         <div class="card-content">
